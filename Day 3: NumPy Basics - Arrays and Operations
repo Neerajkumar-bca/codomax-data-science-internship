@@ -1,0 +1,21 @@
+import numpy as np
+
+# 1. Create Array
+arr = np.array([1, 2, 3, 4, 5])
+print("Array:", arr)
+
+# 2. 2D Array
+matrix = np.array([[1,2,3], [4,5,6]])
+print("Matrix:\n", matrix)
+
+# 3. Mathematical Operations
+print("Add 10:", arr + 10)
+print("Square:", arr**2)
+print("Mean:", np.mean(arr))
+print("Sum:", np.sum(arr))
+
+# 4. Array Calculations
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+print("Element wise multiply:", a*b)
+print("Dot product:", np.dot(a,b))
