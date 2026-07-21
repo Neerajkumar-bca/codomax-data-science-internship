@@ -1,4 +1,4 @@
-# 1. Variables and Data Types
+# 1. Variable and Data Types
 name = "Amit"
 age = 20
 cgpa = 8.5
