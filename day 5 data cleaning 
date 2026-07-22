@@ -1,0 +1,24 @@
+import pandas as pd
+import numpy as np
+
+# 1. Create dirty dataset
+data = {
+    'Name': ['Rahul', 'Priya', 'Aman', 'Rahul', None],
+    'Age': [21, 22, np.nan, 21, 23],
+    'Marks': [85, 90, 78, 85, 92]
+}
+df = pd.DataFrame(data)
+print("Original Data:\n", df)
+
+# 2. Handle Missing Values
+df['Age'].fillna(df['Age'].mean(), inplace=True)
+df['Name'].fillna('Unknown', inplace=True)
+
+# 3. Remove Duplicates
+df.drop_duplicates(inplace=True)
+
+# 4. Correct Data Types
+df['Age'] = df['Age'].astype(int)
+
+print("\nCleaned Data:\n", df)
+print("\nNo Missing Values:", df.isnull().sum())
