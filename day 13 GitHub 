@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "Day 14: Final Internship Project Submission"
+git branch -M main
+git remote add origin https://github.com/yourusername/DataScience-Internship
+git push -u origin main
