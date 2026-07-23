@@ -1,0 +1,29 @@
+# ======================================
+# DAY 6: DATA CLEANING & SORTING
+# Objective: Sort employee data by Salary and export to CSV
+# ======================================
+
+# Step 1: Import Libraries
+import pandas as pd
+
+# Step 2: Create Dataset
+employee_data = {
+    'Name': ['Amit', 'Priya', 'Rahul', 'Sneha', 'Karan', 'Pooja'],
+    'Age': [22, 25, 28, 24, 30, 27],
+    'Salary': [30000, 45000, 50000, 35000, 60000, 48000]
+}
+employee_df = pd.DataFrame(employee_data)
+
+# Step 3: Sort by Salary High to Low
+sorted_df = employee_df.sort_values(by='Salary', ascending=False)
+
+# Step 4: Export Clean Data
+sorted_df.to_csv('cleaned_dataset.csv', index=False)
+print("Cleaned dataset exported successfully!")
+print(sorted_df)
+
+# ======================================
+# CONCLUSION
+# We successfully cleaned and sorted the employee dataset.
+# Key Learning: sort_values() and to_csv() are important for data prep.
+# ======================================
