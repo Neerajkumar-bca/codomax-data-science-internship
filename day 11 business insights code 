@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Dataset load karo
+data = {'Name': ['Amit', 'Priya', 'Rahul', 'Sneha', 'Karan', 'Pooja'],
+        'Age': [22, 25, 28, 24, 30, 27],
+        'Salary': [30000, 45000, 50000, 35000, 60000, 48000]}
+employee_df = pd.DataFrame(data)
+
+print("1. Highest Salary:", employee_df.loc[employee_df['Salary'].idxmax()])
+print("2. Lowest Salary:", employee_df.loc[employee_df['Salary'].idxmin()])
+print("3. Average Age:", employee_df['Age'].mean())
+print("4. Average Salary:", employee_df['Salary'].mean())
+print("5. Salary vs Age Correlation:", employee_df['Age'].corr(employee_df['Salary']))
